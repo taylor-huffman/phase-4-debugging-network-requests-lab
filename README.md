@@ -62,12 +62,12 @@ developing your own process.
 
 - Add a new toy when the toy form is submitted
 
-  - How I debugged:
+  - How I debugged: Submitted the form and found 500 error. Reviewed server logs and found NameError (uninitialized constant ToysController::Toys) - Modified create action to fix issue
 
 - Update the number of likes for a toy
 
-  - How I debugged:
+  - How I debugged: Clicked like button and received Uncaught (in promise) SyntaxError: Unexpected end of JSON input in Console - Network tab showed 204 - No Content error - Reviewed controller action and found no render json: toy command. Added render json: toy
 
 - Donate a toy to Goodwill (and delete it from our database)
 
-  - How I debugged:
+  - How I debugged: Clicked donate button and received 404 error. Reviewed server logs and found ActionController::RoutingError (No route matches [DELETE] "/toys/8"). Added route for destroy action to route file.
